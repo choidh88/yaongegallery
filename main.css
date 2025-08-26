@@ -76,6 +76,11 @@ body {
   margin: auto;
 }
 
+a {
+  text-decoration: underline;
+  color: black;
+}
+
 /* 팝업창 */
 .popup-bg {
   width: 100%;
