@@ -1,0 +1,147 @@
+/* 눈누 기초고딕
+https://noonnu.cc/font_page/1496 */
+@font-face {
+  font-family: "NoonnuBasicGothicRegular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noon-2410@1.0/NoonnuBasicGothicRegular.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "NoonnuBasicGothicRegular", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+h1,
+h2 {
+  font-weight: lighter;
+}
+
+body {
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.card-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 30px;
+}
+
+.card {
+  height: 280px;
+  width: 200px;
+  /* border: 1px black solid; */
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px #444;
+  cursor: pointer;
+}
+
+.card-text {
+  margin-left: 7px;
+  margin-right: 7px;
+}
+
+.date {
+  font-size: 80%;
+}
+
+.card:hover {
+  transform: scale(1.05, 1.05);
+}
+
+.img-wrapper {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.img-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(50, 50);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: auto;
+}
+
+/* 팝업창 */
+.popup-bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 999; /* 우선순위 설정 : 높을 수록 맨 앞에 나옴 */
+}
+
+.popup-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 10px;
+  z-index: 1000; /* 우선순위 설정 : 높을 수록 맨 앞에 나옴 */
+
+  /* 이미지 크기 */
+  --size: 30px;
+  width: calc(9 * var(--size));
+  height: calc(16 * var(--size));
+}
+
+.Slidesbackground {
+  margin: 0;
+  padding: 0;
+}
+
+.mySlides {
+  /* --size: 30px;
+  width: calc(9 * var(--size));
+  height: calc(16 * var(--size)); */
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 5px #444;
+}
+
+.slideshow-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.slideshow-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin: auto;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.25s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}

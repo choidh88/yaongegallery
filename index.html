@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>야옹이 사진관</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./main.css" />
+
+    <!-- js -->
+    <script src="./main.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>YAONGE GALLERY</h1>
+      <h2>야옹이 사진관</h2>
+    </header>
+
+    <br />
+
+    <main>
+      <!-- flex -->
+      <div id="cards">
+        <!-- 카드 템플릿 -->
+        <div class="card" style="display: none" onclick="show('test');">
+          <div class="img-wrapper">
+            <img class="card-img" src="./image/easter-egg.png" alt="테스트" />
+          </div>
+          <div class="card-text">
+            <p>대충 야옹이 제목1</p>
+            <p class="date">2025. 8.</p>
+          </div>
+        </div>
+        <!-- 카드 템플릿 끝 -->
+
+        <div class="card" onclick="show('lying');">
+          <div class="img-wrapper">
+            <img
+              class="card-img"
+              src="./image/lying/1.jpg"
+              alt="🥰 옆으로 누운 야옹이"
+            />
+          </div>
+          <div class="card-text">
+            <p>🥰 옆으로 누운 야옹이</p>
+            <p class="date">2024. 12. 29.</p>
+          </div>
+        </div>
+        <div class="card" onclick="show('winter');">
+          <div class="img-wrapper">
+            <img
+              class="card-img"
+              src="./image/winter/1.jpg"
+              alt="☃️ 겨울 산책"
+            />
+          </div>
+          <div class="card-text">
+            <p>☃️ 겨울 산책</p>
+            <p class="date">2025. 1. 8.</p>
+          </div>
+        </div>
+        <div class="card" onclick="show('nosnowwinter');">
+          <div class="img-wrapper">
+            <img
+              class="card-img"
+              src="./image/nosnowwinter/1.jpg"
+              alt="🍂 눈 없는 날 겨울 산책"
+            />
+          </div>
+          <div class="card-text">
+            <p>🍂 눈 없는 날 겨울 산책</p>
+            <p class="date">2025. 1. 12. - 13.</p>
+          </div>
+        </div>
+        <div class="card" onclick="show('sun');">
+          <div class="img-wrapper">
+            <img class="card-img" src="./image/sun/1.jpg" alt="☀️ 일광욕" />
+          </div>
+          <div class="card-text">
+            <p>☀️ 일광욕</p>
+            <p class="date">2025. 3. 22.</p>
+          </div>
+        </div>
+        <div class="card" onclick="show('rolling');">
+          <div class="img-wrapper">
+            <img
+              class="card-img"
+              src="./image/rolling/1.jpg"
+              alt="👍 뒹굴뒹굴"
+            />
+          </div>
+          <div class="card-text">
+            <p>👍 뒹굴뒹굴</p>
+            <p class="date">2025. 5. 5.</p>
+          </div>
+        </div>
+        <div class="card" onclick="show('box');">
+          <div class="img-wrapper">
+            <img
+              class="card-img"
+              src="./image/box/1.jpg"
+              alt="📦️ 박스 안 야옹이"
+            />
+          </div>
+          <div class="card-text">
+            <p>📦️ 박스 안 야옹이</p>
+            <p class="date">2025. 5. 24.</p>
+          </div>
+        </div>
+        <div class="card" onclick="show('water');">
+          <div class="img-wrapper">
+            <img
+              class="card-img"
+              src="./image/water/1.jpg"
+              alt="💧 목마른 야옹이"
+            />
+          </div>
+          <div class="card-text">
+            <p>💧 목마른 야옹이</p>
+            <p class="date">2025. 6. 28.</p>
+          </div>
+        </div>
+        <div class="card" onclick="show('snake');">
+          <div class="img-wrapper">
+            <img
+              class="card-img"
+              src="./image/snake/1.jpg"
+              alt="🐍 야옹이와 뱀"
+            />
+          </div>
+          <div class="card-text">
+            <p>🐍 야옹이와 뱀</p>
+            <p class="date">2025. 8. 1.</p>
+          </div>
+        </div>
+        <div class="card" onclick="show('yawning');">
+          <div class="img-wrapper">
+            <img
+              class="card-img"
+              src="./image/yawning/1.jpg"
+              alt="🥱 하품하는 야옹이"
+            />
+          </div>
+          <div class="card-text">
+            <p>🥱 하품하는 야옹이</p>
+            <p class="date">2025. 8. 1.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 팝업창과 그 배경 -->
+      <div id="popup" style="display: none">
+        <div class="popup-bg" onclick="hide();"></div>
+        <div class="popup-wrap">
+          <!-- <img id="mainimg" src="./image/box/1.jpg" alt="테스트" /> -->
+          <span class="slideshow-container">
+            <div class="Slidesbackground">
+              <div class="mySlides fade">
+                <img
+                  class="slideshow-image"
+                  src="./image/sun/1.jpg"
+                  alt="☀️ 일광욕"
+                />
+              </div>
+            </div>
+          </span>
+        </div>
+      </div>
+    </main>
+
+    <br />
+    <br />
+    <hr />
+    <br />
+
+    <footer>
+      <p>Made by CHOI DONGHA.</p>
+      <p>
+        더 많은 사진과 영상을 보고 싶다면?
+        <a
+          href="https://www.instagram.com/yaonge.storage/"
+          target="_blank"
+          style="text-decoration: underline; color: black"
+          >@yaonge.storage</a
+        >를 팔로우 하세요!
+      </p>
+    </footer>
+  </body>
+</html>
